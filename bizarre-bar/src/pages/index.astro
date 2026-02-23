@@ -1,0 +1,87 @@
+---
+import '../styles/global.css';
+import Sidebar from '../components/Sidebar.astro';
+import SectionAbout from '../components/SectionAbout.astro';
+import SectionEducation from '../components/SectionEducation.astro';
+import SectionExperience from '../components/SectionExperience.astro';
+import SectionSkills from '../components/SectionSkills.astro';
+import SectionPortfolio from '../components/SectionPortfolio.astro';
+import SectionInterests from '../components/SectionInterests.astro';
+import SectionAwards from '../components/SectionAwards.astro';
+
+const title = 'Remigiusz Pisarski – Java Backend Developer';
+const description =
+  'Oficjalna strona Remigiusza Pisarskiego, Java backend developera z doświadczeniem w Spring, mikroserwisach i aplikacjach webowych.';
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content={description} />
+    <meta name="author" content="Remigiusz Pisarski" />
+    <title>{title}</title>
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:title" content="Remigiusz Pisarski – Backend Developer" />
+    <meta
+      property="og:description"
+      content="Remigiusz Pisarski – Java backend developer z doświadczeniem w Spring, mikroserwisach i aplikacjach webowych."
+    />
+    <meta property="og:image" content="/assets/img/profile.jpg" />
+    <meta property="og:url" content="https://remmo1.github.io/" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+
+    <!-- Google Fonts (optional, can be replaced with Tailwind font utilities) -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Font Awesome icons -->
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/7070b0c049.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+
+  <body
+    id="page-top"
+    class="min-h-screen bg-slate-950 text-slate-100 antialiased"
+  >
+    <div class="flex flex-col lg:flex-row">
+      <!-- Sidebar / Nav -->
+      <Sidebar />
+
+      <!-- Page Content -->
+      <main
+        class="w-full lg:ml-72 px-4 sm:px-8 lg:px-16 py-10 lg:py-16 space-y-16"
+      >
+        <SectionAbout />
+        <SectionEducation />
+        <SectionExperience />
+        <SectionSkills />
+        <SectionPortfolio />
+        <SectionInterests />
+        <SectionAwards />
+      </main>
+    </div>
+  </body>
+</html>
