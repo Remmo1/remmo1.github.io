@@ -1,0 +1,66 @@
+---
+import SocialIconLink from './SocialIconLink.astro';
+---
+
+<section
+  id="about"
+  class="border-b border-slate-800 pb-12 scroll-mt-24 lg:scroll-mt-8"
+>
+  <div class="max-w-4xl space-y-6">
+    <h1
+      class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight"
+    >
+      Remigiusz
+      <span class="text-sky-400">Pisarski</span>
+    </h1>
+
+    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-300">
+      <a
+        href="mailto:remigiusz.pisarski@onet.pl"
+        class="underline underline-offset-4 decoration-sky-500 hover:text-white"
+      >
+        remigiusz.pisarski@onet.pl
+      </a>
+      <span class="text-slate-600">•</span>
+      <span>Wrocław, Polska</span>
+    </div>
+
+    <p class="text-base sm:text-lg leading-relaxed text-slate-300">
+      Passionate backend engineer with over two years of professional
+      experience building scalable Java/Spring microservices. Currently
+      contributing to healthcare platforms at
+      <strong class="font-semibold text-slate-100"
+        >Convisa Consulting</strong
+      >. I earned a B.Eng. in Applied Computer Science from Wrocław
+      University of Science and Technology and continually sharpen my
+      skills in algorithms, database design, and distributed systems.
+      Outside of work I enjoy exploring new web technologies and
+      collaborating on open‑source projects.
+    </p>
+
+    <div class="flex items-center gap-4 pt-2">
+      <SocialIconLink
+        href="https://www.linkedin.com/in/remigiusz-pisarski-5a6154248/"
+        label="LinkedIn"
+        iconClass="fab fa-linkedin"
+      />
+      <SocialIconLink
+        href="https://github.com/Remmo1"
+        label="GitHub"
+        iconClass="fab fa-github"
+      />
+      <SocialIconLink
+        href="https://twitter.com/Remmo123456789"
+        label="Twitter"
+        iconClass="fab fa-twitter"
+      />
+      <SocialIconLink
+        href="https://www.facebook.com/profile.php?id=100007905436766"
+        label="Facebook"
+        iconClass="fab fa-facebook-f"
+      />
+    </div>
+  </div>
+</section>
+
+
