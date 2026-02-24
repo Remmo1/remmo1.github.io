@@ -4,7 +4,7 @@ import SocialIconLink from './SocialIconLink.astro';
 
 <section
   id="about"
-  class="border-b border-slate-800 pb-12 scroll-mt-24 lg:scroll-mt-8"
+  class="border-b border-slate-200 dark:border-slate-800 pb-12 scroll-mt-24 lg:scroll-mt-8"
 >
   <div class="max-w-4xl space-y-6">
     <h1
@@ -14,28 +14,24 @@ import SocialIconLink from './SocialIconLink.astro';
       <span class="text-sky-400">Pisarski</span>
     </h1>
 
-    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-300">
+    <div class="flex flex-wrap items-center gap-3 text-sm text-slate-700 dark:text-slate-300">
       <a
         href="mailto:remigiusz.pisarski@onet.pl"
         class="underline underline-offset-4 decoration-sky-500 hover:text-white"
       >
         remigiusz.pisarski@onet.pl
       </a>
-      <span class="text-slate-600">•</span>
+      <span class="text-slate-500 dark:text-slate-600">•</span>
       <span>Wrocław, Polska</span>
     </div>
 
-    <p class="text-base sm:text-lg leading-relaxed text-slate-300">
-      Passionate backend engineer with over two years of professional
-      experience building scalable Java/Spring microservices. Currently
-      contributing to healthcare platforms at
-      <strong class="font-semibold text-slate-100"
-        >Convisa Consulting</strong
-      >. I earned a B.Eng. in Applied Computer Science from Wrocław
-      University of Science and Technology and continually sharpen my
-      skills in algorithms, database design, and distributed systems.
-      Outside of work I enjoy exploring new web technologies and
-      collaborating on open‑source projects.
+    <p class="text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
+      Programista z ponad 3-letnim doświadczeniem w wytwarzaniu i utrzymywaniu aplikacji webowych. 
+      Specjalizuję się w technologiach Java, Spring Boot oraz posiadam solidną wiedzę z zakresu baz danych
+      (SQL, PostgreSQL) i środowisk chmurowych (AWS, Docker, Kubernetes). Biegły w pełnym cyklu wytwarzania
+      oprogramowania — od projektowania architektury i implementacji funkcjonalności po testy. 
+      Zmotywowany, skrupulatny i pasjonujący się dostarczaniem czystych, skalowalnych rozwiązań przy 
+      efektywnej współpracy w zespołach Agile.
     </p>
 
     <div class="flex items-center gap-4 pt-2">
@@ -50,10 +46,19 @@ import SocialIconLink from './SocialIconLink.astro';
         iconClass="fab fa-github"
       />
       <SocialIconLink
-        href="https://twitter.com/Remmo123456789"
-        label="Twitter"
-        iconClass="fab fa-twitter"
-      />
+        href="https://x.com/Remmo123456789"
+        label="X"
+      >
+        <!-- simple X logo SVG pulled from FontAwesome 6 or custom source -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="h-5 w-5"
+        >
+          <path d="M23.298 4.155a1.37 1.37 0 0 0-1.062-.467 1.37 1.37 0 0 0-.976.426L12 13.402 2.74 4.114a1.371 1.371 0 0 0-1.948 1.925l9.256 9.333-9.256 9.333a1.371 1.371 0 1 0 1.948 1.925L12 16.483l9.32 9.347a1.37 1.37 0 0 0 1.948-1.925l-9.256-9.333 9.256-9.333a1.37 1.37 0 0 0 .04-1.403z"/>
+        </svg>
+      </SocialIconLink>
       <SocialIconLink
         href="https://www.facebook.com/profile.php?id=100007905436766"
         label="Facebook"
