@@ -9,6 +9,29 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<!-- small inline script to initialize the theme on first paint and
+	             expose a toggle function globally -->
+		<script>
+			(function() {
+				const stored = localStorage.getItem('theme');
+				if (
+					stored === 'dark' ||
+					(!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)
+				) {
+					document.documentElement.classList.add('dark');
+				}
+			})();
+			window.toggleTheme = function() {
+				const html = document.documentElement;
+				if (html.classList.contains('dark')) {
+					html.classList.remove('dark');
+					localStorage.theme = 'light';
+				} else {
+					html.classList.add('dark');
+					localStorage.theme = 'dark';
+				}
+			};
+		</script>
 		<slot />
 	</body>
 </html>

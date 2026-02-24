@@ -4,7 +4,7 @@ import { education } from '../data/education';
 
 <section
   id="education"
-  class="border-b border-slate-800 pb-12 scroll-mt-24 lg:scroll-mt-8"
+  class="border-b border-slate-200 dark:border-slate-800 pb-12 scroll-mt-24 lg:scroll-mt-8"
 >
   <div class="max-w-4xl space-y-8">
     <h2 class="text-3xl font-bold tracking-tight">Edukacja</h2>
@@ -20,10 +20,10 @@ import { education } from '../data/education';
               <p class="text-sm text-sky-400">{entry.degree}</p>
             )}
             {entry.faculty && (
-              <p class="text-sm text-slate-300">{entry.faculty}</p>
+              <p class="text-sm text-slate-700 dark:text-slate-300">{entry.faculty}</p>
             )}
             {entry.field && (
-              <p class="text-sm text-slate-300">{entry.field}</p>
+              <p class="text-sm text-slate-700 dark:text-slate-300">{entry.field}</p>
             )}
           </div>
           <div class="text-sm text-sky-400 whitespace-nowrap">

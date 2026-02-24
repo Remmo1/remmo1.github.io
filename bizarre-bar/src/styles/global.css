@@ -7,6 +7,13 @@ html {
 }
 
 body {
-  @apply bg-slate-950 text-slate-100 antialiased font-sans;
+  /* default to light mode colors */
+  @apply bg-white text-slate-900 antialiased font-sans;
+}
+
+/* when the root <html> has the "dark" class Tailwind will emit these
+   variants, so we can simply flip the class in JS */
+.dark body {
+  @apply bg-slate-950 text-slate-100;
 }
 

@@ -7,18 +7,25 @@ export type ExperienceEntry = {
 
 export const experience: ExperienceEntry[] = [
   {
-    company: 'Axxiome Health',
-    role: 'Java Trainee / Junior Java Backend Developer',
+    company: 'Convisa',
+    role: 'Mid Java Developer',
     description:
-      'Pierwsze doświadczenie w pracy jako stażysta Javy. Staż zakończyłem w grudniu 2022, od stycznia 2023 rozpocząłem pracę przy projekcie AOK CX.',
-    period: '01.07.2022 - 30.06.2023',
+      'Pracuję nad rozwojem i utrzymaniem mikroserwisów oraz optymalizacją backendu systemów AOK CX.',
+    period: 'styczeń 2025 - obecnie',
   },
   {
-    company: 'Convisa Consulting',
-    role: 'Java Backend Developer',
+    company: 'Convisa',
+    role: 'Java Junior Developer',
     description:
-      'Pracuję nad rozwojem mikrousług medycznych oraz optymalizacją backendu systemów AOK CX.',
-    period: 'lipiec 2023 &ndash; obecnie',
+      'Pracuję nad rozwojem i utrzymaniem mikroserwisów oraz optymalizacją backendu systemów AOK CX.',
+    period: 'styczeń 2023 - grudzień 2024',
   },
+  {
+    company: 'Convista Poland (Axxiome Health)',
+    role: 'Java Trainee',
+    description:
+      'Pierwsze doświadczenie w pracy jako stażysta Javy. Staż zakończyłem w grudniu 2022, od stycznia 2023 rozpocząłem pracę przy projekcie AOK CX.',
+    period: 'lipiec 2022 - grudzień 2022',
+  }
 ];
 

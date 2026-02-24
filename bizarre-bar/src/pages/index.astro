@@ -25,13 +25,36 @@ const description =
     <meta name="author" content="Remigiusz Pisarski" />
     <title>{title}</title>
 
+    <!-- theme initializer (runs before paint, sets html.dark if needed) -->
+    <script>
+      (function() {
+        const stored = localStorage.getItem('theme');
+        if (
+          stored === 'dark' ||
+          (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+      window.toggleTheme = function() {
+        const html = document.documentElement;
+        if (html.classList.contains('dark')) {
+          html.classList.remove('dark');
+          localStorage.theme = 'light';
+        } else {
+          html.classList.add('dark');
+          localStorage.theme = 'dark';
+        }
+      };
+    </script>
+
     <!-- Open Graph / social sharing -->
     <meta property="og:title" content="Remigiusz Pisarski – Backend Developer" />
     <meta
       property="og:description"
       content="Remigiusz Pisarski – Java backend developer z doświadczeniem w Spring, mikroserwisach i aplikacjach webowych."
     />
-    <meta property="og:image" content="/assets/img/profile.jpg" />
+    <meta property="og:image" content="/assets/img/photo.png" />
     <meta property="og:url" content="https://remmo1.github.io/" />
     <meta name="twitter:card" content="summary_large_image" />
 
@@ -64,7 +87,7 @@ const description =
 
   <body
     id="page-top"
-    class="min-h-screen bg-slate-950 text-slate-100 antialiased"
+    class="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased"
   >
     <div class="flex flex-col lg:flex-row">
       <!-- Sidebar / Nav -->
