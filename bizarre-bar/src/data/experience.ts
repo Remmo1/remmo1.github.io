@@ -1,31 +1,48 @@
+export type Translatable = {
+  pl: string;
+  en: string;
+};
+
 export type ExperienceEntry = {
-  company: string;
-  role: string;
-  description: string;
-  period: string;
+  company: Translatable;
+  role: Translatable;
+  description: Translatable;
+  period: Translatable;
 };
 
 export const experience: ExperienceEntry[] = [
   {
-    company: 'Convisa',
-    role: 'Mid Java Developer',
-    description:
-      'Pracuję nad rozwojem i utrzymaniem mikroserwisów oraz optymalizacją backendu systemów AOK CX.',
-    period: 'styczeń 2025 - obecnie',
+    company: { pl: 'Convisa', en: 'Convisa' },
+    role: { pl: 'Mid Java Developer', en: 'Mid Java Developer' },
+    description: {
+      pl:
+        'Pracuję nad rozwojem i utrzymaniem mikroserwisów oraz optymalizacją backendu systemów AOK CX.',
+      en:
+        'I work on developing and maintaining microservices and optimizing the backend of the AOK CX systems.',
+    },
+    period: { pl: 'styczeń 2025 - obecnie', en: 'January 2025 - present' },
   },
   {
-    company: 'Convisa',
-    role: 'Java Junior Developer',
-    description:
-      'Pracuję nad rozwojem i utrzymaniem mikroserwisów oraz optymalizacją backendu systemów AOK CX.',
-    period: 'styczeń 2023 - grudzień 2024',
+    company: { pl: 'Convisa', en: 'Convisa' },
+    role: { pl: 'Java Junior Developer', en: 'Java Junior Developer' },
+    description: {
+      pl:
+        'Pracuję nad rozwojem i utrzymaniem mikroserwisów oraz optymalizacją backendu systemów AOK CX.',
+      en:
+        'I work on developing and maintaining microservices and optimizing the backend of the AOK CX systems.',
+    },
+    period: { pl: 'styczeń 2023 - grudzień 2024', en: 'January 2023 - December 2024' },
   },
   {
-    company: 'Convista Poland (Axxiome Health)',
-    role: 'Java Trainee',
-    description:
-      'Pierwsze doświadczenie w pracy jako stażysta Javy. Staż zakończyłem w grudniu 2022, od stycznia 2023 rozpocząłem pracę przy projekcie AOK CX.',
-    period: 'lipiec 2022 - grudzień 2022',
+    company: { pl: 'Convista Poland (Axxiome Health)', en: 'Convista Poland (Axxiome Health)' },
+    role: { pl: 'Java Trainee', en: 'Java Trainee' },
+    description: {
+      pl:
+        'Pierwsze doświadczenie w pracy jako stażysta Javy. Staż zakończyłem w grudniu 2022, od stycznia 2023 rozpocząłem pracę przy projekcie AOK CX.',
+      en:
+        'My first experience working as a Java intern. I finished the internship in December 2022 and began working on the AOK CX project in January 2023.',
+    },
+    period: { pl: 'lipiec 2022 - grudzień 2022', en: 'July 2022 - December 2022' },
   }
 ];
 

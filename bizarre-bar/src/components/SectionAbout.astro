@@ -1,5 +1,12 @@
 ---
 import SocialIconLink from './SocialIconLink.astro';
+import { t, type Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props as Props;
 ---
 
 <section
@@ -26,12 +33,7 @@ import SocialIconLink from './SocialIconLink.astro';
     </div>
 
     <p class="text-base sm:text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-      Programista z ponad 3-letnim doświadczeniem w wytwarzaniu i utrzymywaniu aplikacji webowych. 
-      Specjalizuję się w technologiach Java, Spring Boot oraz posiadam solidną wiedzę z zakresu baz danych
-      (SQL, PostgreSQL) i środowisk chmurowych (AWS, Docker, Kubernetes). Biegły w pełnym cyklu wytwarzania
-      oprogramowania — od projektowania architektury i implementacji funkcjonalności po testy. 
-      Zmotywowany, skrupulatny i pasjonujący się dostarczaniem czystych, skalowalnych rozwiązań przy 
-      efektywnej współpracy w zespołach Agile.
+      {t(locale, 'about.description')}
     </p>
 
     <div class="flex items-center gap-4 pt-2">
