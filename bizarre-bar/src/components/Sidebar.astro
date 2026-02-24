@@ -1,5 +1,13 @@
 ---
 import profileImg from '../assets/img/photo.png';
+import { t } from '../i18n';
+import type { Locale } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props as Props;
 ---
 
 <nav
@@ -29,54 +37,62 @@ import profileImg from '../assets/img/photo.png';
       <a
         href="#about"
         class="px-3 py-1.5 rounded-full lg:rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >Główna</a
+        >{t(locale, 'nav.home')}</a
       >
     </li>
     <li>
       <a
         href="#education"
         class="px-3 py-1.5 rounded-full lg:rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >Wykształcenie</a
+        >{t(locale, 'nav.education')}</a
       >
     </li>
     <li>
       <a
         href="#experience"
         class="px-3 py-1.5 rounded-full lg:rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >Doświadczenie</a
+        >{t(locale, 'nav.experience')}</a
       >
     </li>
     <li>
       <a
         href="#skills"
         class="px-3 py-1.5 rounded-full lg:rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >Umiejętności</a
+        >{t(locale, 'nav.skills')}</a
       >
     </li>
     <li>
       <a
         href="#portfolio"
         class="px-3 py-1.5 rounded-full lg:rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >Portfolio</a
+        >{t(locale, 'nav.portfolio')}</a
       >
     </li>
     <li>
       <a
         href="#interests"
         class="px-3 py-1.5 rounded-full lg:rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >Zainteresowania</a
+        >{t(locale, 'nav.interests')}</a
       >
     </li>
     <li>
       <a
         href="#awards"
         class="px-3 py-1.5 rounded-full lg:rounded-md hover:bg-slate-200 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
-        >Certyfikaty</a
+        >{t(locale, 'nav.awards')}</a
       >
     </li>
   </ul>
 
-  <div class="mt-6 flex justify-center">
+  <div class="mt-6 flex flex-col items-center gap-4">
+    <!-- language switch -->
+    <a
+      href={locale === 'pl' ? '/en' : '/pl'}
+      class="px-3 py-1.5 rounded-full border hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
+    >
+      {locale === 'pl' ? t(locale, 'button.switchToEnglish') : t(locale, 'button.switchToPolish')}
+    </a>
+
     <button
       onclick="toggleTheme()"
       class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors"
